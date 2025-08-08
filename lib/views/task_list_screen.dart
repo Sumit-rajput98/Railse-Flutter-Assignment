@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:ionicons/ionicons.dart';
 import '../viewmodels/task_view_model.dart';
 import 'widgets/task_card_widget.dart';
 
@@ -28,29 +27,7 @@ class TaskListScreen extends StatelessWidget {
         builder: (context, viewModel, child) {
           return CustomScrollView(
             slivers: [
-              SliverToBoxAdapter(
-                child: Padding(
-                  padding: const EdgeInsets.all(20),
-                  child: Row(
-                    children: [
-                      Icon(
-                        Ionicons.list,
-                        color: Colors.grey.shade700,
-                        size: 20,
-                      ),
-                      const SizedBox(width: 8),
-                      Text(
-                        '${viewModel.tasks.length} Tasks',
-                        style: TextStyle(
-                          color: Colors.grey.shade700,
-                          fontSize: 16,
-                          fontWeight: FontWeight.w600,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
+
               SliverList(
                 delegate: SliverChildBuilderDelegate(
                       (context, index) {

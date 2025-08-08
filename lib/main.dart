@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         title: 'Task Management',
         theme: ThemeData(
           primarySwatch: Colors.blue,
-          useMaterial3: true,
+          useMaterial3: false,
         ),
         home: const TaskListScreen(),
         debugShowCheckedModeBanner: false,
